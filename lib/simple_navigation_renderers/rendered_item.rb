@@ -89,7 +89,7 @@ module SimpleNavigationRenderers
         link_options[:"data-toggle"] = "dropdown"
         link_options[:"data-target"] = "#"
 
-        content = link_to( name, "#", link_options ) + render_sub_navigation_for(item)
+        content = link_to( name.html_safe, "#", link_options ) + render_sub_navigation_for(item)
         content_tag(:li, content, options)
       end
 
